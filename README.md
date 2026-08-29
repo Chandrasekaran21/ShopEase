@@ -22,15 +22,14 @@ ShopEase is a shopping cart application where users can browse products, view de
  - User reviews and ratings submission
  - Order history and order confirmation
 
-## Tech Stack
-# Frontend
+# Tech Stack
+## Frontend
 - React (Vite)
 - Redux Toolkit + RTK Query
 - Tailwind CSS + DaisyUI
 - React Router
 
-# Backend
-
+## Backend
 - Node.js + Express
 - MongoDB + Mongoose
 - CORS, dotenv
