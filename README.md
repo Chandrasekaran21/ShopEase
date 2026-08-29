@@ -7,13 +7,13 @@ ShopEase is a shopping cart application where users can browse products, view de
 
 Features
 
-Home page — dynamic product grid fetched from a live REST API
-Product details page — individual product view with ratings and add-to-cart
-Cart management — add/remove items, adjust quantities, with automatic recalculation of item price, shipping, tax, and total
-Cart persistence — cart state saved to localStorage, survives page refresh
-Theme toggle — light/dark mode using DaisyUI + a custom Redux-synced hook
-RTK Query integration — efficient API data fetching and caching, no manual useEffect/fetch boilerplate
-Responsive design — built mobile-first with Tailwind CSS
+🏠 Home page — dynamic product grid fetched from a live REST API
+🔍 Product details page — individual product view with ratings and add-to-cart
+🛒 Cart management — add/remove items, adjust quantities, with automatic recalculation of item price, shipping, tax, and total
+💾 Cart persistence — cart state saved to `localStorage`, survives page refresh
+🎨 Theme toggle — light/dark mode using DaisyUI + a custom Redux-synced hook
+⚡ RTK Query integration — efficient API data fetching and caching, no manual `useEffect`/`fetch` boilerplate
+📱 Responsive design — built mobile-first with Tailwind CSS
 
 In Progress / Roadmap
  User authentication (login/register with JWT)
