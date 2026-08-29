@@ -1,4 +1,4 @@
-## ShopEase — Full-Stack E-Commerce Application
+# ShopEase — Full-Stack E-Commerce Application
 
 A full-stack e-commerce web application built with the MERN stack, featuring a product catalog, dynamic cart management with real-time price calculation, and a responsive UI built with Tailwind CSS and DaisyUI.
 
@@ -23,13 +23,13 @@ ShopEase is a shopping cart application where users can browse products, view de
  - Order history and order confirmation
 
 ## Tech Stack
-## Frontend
+# Frontend
 - React (Vite)
 - Redux Toolkit + RTK Query
 - Tailwind CSS + DaisyUI
 - React Router
 
-## Backend
+# Backend
 
 - Node.js + Express
 - MongoDB + Mongoose
