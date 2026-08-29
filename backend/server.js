@@ -25,7 +25,7 @@ connectDB();
 
 app.get('/', (req, res)=>{
 
-    res.send("Hello world!");
+    res.send("Hello World!");
 })
 
 app.use("/api/product", productRoutes);
