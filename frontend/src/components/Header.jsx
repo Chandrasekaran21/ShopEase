@@ -1,24 +1,13 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import useTheme from "../hooks/useTheme";
-import { useState } from "react";
 
 
 const Header = () => {
 
   const {cartItem} = useSelector((state)=> state.cart);
 
-  const themes = ['light', 'dark', 'cupcake', 'synthwave'];
-
   const {theme, changeTheme} = useTheme();
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleSelect = (t)=>{
-
-    changeTheme(theme);
-    setIsOpen(false);
-  }
   
   return (
     
@@ -38,9 +27,7 @@ const Header = () => {
             </li>
             <li>
               <details className="dropdown dropdown-end" >
-                <summary >
-                  Chandru
-                </summary>
+                <summary>Chandru</summary>
               </details>
             </li>
           </ul>
