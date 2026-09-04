@@ -57,12 +57,12 @@ const ProductDetails = () => {
               <h2>{productData.name}</h2>
             </div>
             <p>{productData.description}</p>
-            <p>{productData.price}</p>
+            <p>$ {productData.price}</p>
             <Rating
               value={productData.rating}
               text={productData.numReviews}
             ></Rating>
-            <p>{productData.countInStock > 0 ? "In Stock" : "out of stock"}</p>
+            <p>{productData.countInStock > 1 ? "In Stock" : <strong>out of stock</strong>}</p>
             {productData.countInStock > 0 && (
               <div className="mt-4">
                 <h4>Qty</h4>
