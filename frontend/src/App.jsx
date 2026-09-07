@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Product from './components/Product'
 import {Outlet} from "react-router-dom"
 import useTheme from './hooks/useTheme'
+import { ToastContainer } from 'react-toastify'
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <>
       <Header/>
+      <ToastContainer/>
       <main className=' min-h-lvh'>
         <div className='container mx-auto px-4'>
           

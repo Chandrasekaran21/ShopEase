@@ -1,26 +1,89 @@
-import asyncHandler from "../middleware/asyncHandler";
+import asyncHandler from "../middleware/asyncHandler.js";
 import User from '../model/userModel.js'
+import jwt from "jsonwebtoken";
 
 const authUser = asyncHandler(async(req, res) => {
 
     const {email, password} = req.body;
 
-    const user = User.findOne({email});
+    const user = await User.findOne({email});
 
     if(user && (await user.matchPassword(password)) ){
 
+        const token = jwt.sign({userId:user._id}, process.env.JWT_SECRET, {expiresIn:"30d"});
+
+        res.cookie('jwt', token, {
+
+            httpOnly: true,
+            secure: false,
+            sameSite: 'strict',
+            maxAge: 30 * 24 * 60 * 60 * 1000
+
+        })
+
+        // set jwt as http
+
         res.status(200).json({
-            id:user._id,
+            _id:user._id,
             name:user.name,
             email:user.email,
             isAdmin:user.isAdmin
         })
+    } else{
+
+        res.status(401);
+
+        throw new Error ("invalid Email or Password")
     }
 
-    res.send("Auth User");
+    
 });
 
 const registerUser = asyncHandler(async(req, res) => {
+
+    const {name, email, password} = req.body;
+
+    const userExist = await User.findOne({ email });
+
+    if(userExist){
+
+        res.status(400);
+
+        throw new Error("User already exist")
+    }
+
+    const user = await User.create({
+
+        name,
+        email,
+        password
+    });
+
+    if(user){
+
+        const token = jwt.sign({userId:user._id}, process.env.JWT_SECRET, {expiresIn:"30d"});
+
+        res.cookie("jwt", token, {
+
+            httpOnly: true,
+            secure:false,
+            sameSite: "strict",
+            maxAge: 30 * 24 * 60 * 60 * 10000
+        })
+
+        res.status(201).json({
+
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            isAdmin: user.isAdmin
+        })
+    } else{
+
+        res.status(400);
+
+        throw new Error ("Invalid user data");
+    }
 
     res.send("Register User");
 });
