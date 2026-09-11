@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useLoginMutation } from "../slices/userApiSlice";
 import {useLocation, useNavigate} from "react-router-dom";
+import { setCredentials } from "../slices/authSlice";
 import { useState } from "react";
 import {toast} from "react-toastify";
 
@@ -27,6 +28,8 @@ const LoginScreen = () => {
       try{
 
         const res = await login({email, password}).unwrap();
+
+        dispatch(setCredentials({...res}));
         navigate("/");
 
       } catch(error){
