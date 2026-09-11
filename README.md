@@ -16,11 +16,7 @@ ShopEase is a shopping cart application where users can browse products, view de
 - Responsive design — built mobile-first with Tailwind CSS
 
 ## In Progress / Roadmap
- - User authentication (login/register with JWT)
  - Checkout & shipping flow
- - Product search and filtering
- - User reviews and ratings submission
- - Order history and order confirmation
 
 ## Tech Stack
 ### Frontend

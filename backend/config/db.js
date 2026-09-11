@@ -2,7 +2,6 @@
 
 import mongoose from "mongoose";
 
-// mongodb+srv://chandru:chandru123@ecom.wgdzfwj.mongodb.net/Ecom
 
 const connectDB = async () =>{
 
