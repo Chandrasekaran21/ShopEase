@@ -18,7 +18,7 @@ const Product = ({product}) => {
             <h2 className="card-title">{product.name}</h2>
             <p className='line-clamp-2' >{product.description}</p>
             <Rating value={product.rating} text={product.numReviews} />
-            <h3 className='card-title badge badge-primary' >{product.price}</h3>
+            <h3 className='card-title badge badge-primary py-4' >{product.price}</h3>
             
         </div>
     </div>

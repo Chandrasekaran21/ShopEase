@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useLoginMutation } from "../slices/userApiSlice";
-import {useLocation, useNavigate} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import { setCredentials } from "../slices/authSlice";
 import { useState } from "react";
 import {toast} from "react-toastify";
@@ -43,8 +43,8 @@ const LoginScreen = () => {
   return (
     <div className="px-20">
       <h1 className="text-4xl font-bold mb-5 mt-5">Log In</h1>
-      <form  className="w-full" onSubmit={submitHandler}>
-        <label className="input w-full mb-5">
+      <form  className="w-full flex flex-col" onSubmit={submitHandler}>
+        <label className="input w-full mb-5 flex items-center gap-2">
           <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@ const LoginScreen = () => {
             maxLength="30"
           />
         </label>
-        <label className="input w-full">
+        <label className="input w-full flex items-center gap-2">
           <svg
             className="h-[1em] opacity-50"
             xmlns="http://www.w3.org/2000/svg"
@@ -97,6 +97,11 @@ const LoginScreen = () => {
           />
         </label>
         <button type="submit" className="btn btn-primary mt-5 p-5">Log In</button>
+        <p className="mt-5">New Customer?{" "}
+          <Link to="/register" className="link link-primary" >
+            Register Here
+          </Link>
+        </p>
       </form>
     </div>
   );

@@ -73,7 +73,7 @@ const productSchema = new mongoose.Schema({
         required:true,
         default:0  
     },
-    reviews:{reviewSchema}
+    reviews:[reviewSchema]
 },{
     timestamps:true
 })

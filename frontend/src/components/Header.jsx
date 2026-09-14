@@ -69,9 +69,8 @@ const Header = () => {
           
         </ul>
         <label
-          className="toggle text-base-content"
+          className="swap swap-rotate"
           style={{ "--tglbg": "#2563eb" }}
-          onClick={(e) => e.stopPropagation()}
         >
           <input
             type="checkbox"
@@ -80,6 +79,7 @@ const Header = () => {
             onChange={(e) => changeTheme(e.target.checked ? "dark" : "light")}
           />
           <svg
+            className="swap-off h-8 w-8 fill-current"
             aria-label="sun"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -103,6 +103,7 @@ const Header = () => {
             </g>
           </svg>
           <svg
+            className="swap-on h-8 w-8 fill-current"
             aria-label="moon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

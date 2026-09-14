@@ -13,7 +13,7 @@ const getProductById = asyncHandler(async(req, res)=>{
 
     const productData = await Product.findById(req.params.id);
 
-    if(res.json(productData)){
+    if(productData){
 
         res.json(productData);
     } else{
