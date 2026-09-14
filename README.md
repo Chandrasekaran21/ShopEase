@@ -2,6 +2,8 @@
 
 A full-stack e-commerce web application built with the MERN stack, featuring a product catalog, dynamic cart management with real-time price calculation, and a responsive UI built with Tailwind CSS and DaisyUI.
 
+## Demo Link - https://shop-ease-olive-mu.vercel.app/
+
 ## Overview
 ShopEase is a shopping cart application where users can browse products, view detailed product pages, and manage their cart with live price/shipping/tax calculations. The project was built to practice real-world frontend architecture — global state management with Redux Toolkit, API data fetching with RTK Query, and a connected Express/MongoDB backend.
 
